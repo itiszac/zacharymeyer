@@ -1,13 +1,9 @@
-import express, {Application, Request, Response, NextFunction} from 'express';
+import {config} from 'dotenv';
+import {app} from './app';
 
-// Boot express
-const app: Application = express();
-const port = 8080;
+config();
 
-// Application routing
-app.use('/', (req: Request, res: Response, _next: NextFunction) => {
-  res.status(200).send({data: 'Hello from Ornio AS'});
-});
+const PORT: number = parseInt(process.env.PORT as string) || 8081;
 
 // Start server
-app.listen(port, () => console.log(`Server is listening on port ${port}!`));
+app.listen(PORT, () => console.log(`Server is listening on port ${PORT}!`));
