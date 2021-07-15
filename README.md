@@ -19,6 +19,10 @@ Builds a production ready docker container or builds the app for production insi
 
 Runs the production build from the ./build directory
 
+### `yarn test`
+
+Runs and executes tests and has a default flag of --watchAll. This automatically updates when making changes to test files.
+
 ### `yarn typecheck`
 
 This will run a typecheck on the project.
