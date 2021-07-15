@@ -4,7 +4,10 @@
   "main": "./src/index.ts",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon",
+    "start": "node ./build/index.js",
+    "docker:build": "docker build -t zacharymeyer .",
+    "dev": "docker-compose up",
+    "dev:app": "nodemon",
     "build": "tsc",
     "typecheck": "tsc --pretty --noEmit",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx .",
