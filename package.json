@@ -5,10 +5,10 @@
   "license": "MIT",
   "scripts": {
     "start": "node ./build/index.js",
-    "docker:build": "docker build -t zacharymeyer .",
+    "build:app": "tsc",
+    "build": "docker build -t zacharymeyer .",
     "dev": "docker-compose up",
     "dev:app": "nodemon",
-    "build": "tsc",
     "typecheck": "tsc --pretty --noEmit",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx .",
     "prettier": "prettier --write src/**/*.{js,jsx,ts,tsx}",
