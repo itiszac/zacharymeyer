@@ -32,7 +32,7 @@ ArticleController.get('/', (_req: Request, res: Response) => {
       updatedAt: new Date(),
     },
   ];
-  res.render('articles', {articles: articles});
+  res.status(200).render('articles', {articles: articles});
 });
 
 ArticleController.get('/new', (req: Request, res: Response) => {

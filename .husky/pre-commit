@@ -25,11 +25,11 @@ npm run typecheck ||
 )
 
 # Check Jest tests
-# npm run test -- --watchAll=false ||
-# (
-#     echo 'Jest Check Failed. Make required changes listed above before recommitting.'
-#     false;
-# )
+npm run test:ci ||
+(
+    echo 'Jest Check Failed. Make required changes listed above before recommitting.'
+    false;
+)
 
 # If everything passes... Now we can commit
 echo 'Code has passed all tests. Attempting to build project.'
